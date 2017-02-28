@@ -532,7 +532,7 @@
     element: document.getElementsByClassName('cube')[0]
   });
 
-  //  IMAGE Gallery
+  //*********************  IMAGE Gallery  *************************************/
 
   function getRandomSize(min, max) {
     return Math.round(Math.random() * (max - min) + min);
@@ -548,4 +548,12 @@
 
   $('#photos').append(allImages);
 
+  //************************** MODAL ******************************************/
+  $(function(e) {
+		e.preventDefault();
+    $('.pop').on('click', function() {
+      $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+      $('#imagemodal').modal('show');
+    });
+  })
 })(jQuery);
