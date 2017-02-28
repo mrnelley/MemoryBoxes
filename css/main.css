@@ -1009,11 +1009,13 @@ header .social-links ul li a:hover, header .social-links ul li a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: .55;
-	background: #20002c; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #20002c , #cbb4d4); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #20002c , #cbb4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  opacity: .9;
+  background: -moz-linear-gradient( rgba(102, 51, 153, 0.45), rgba(255, 0, 0, 0.45));
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient( rgba(102, 51, 153, 0.45), rgba(255, 0, 0, 0.45));
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient( rgba(102, 51, 153, 0.45), rgba(255, 0, 0, 0.45));
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=1);
   /* IE6-9 */
 }
@@ -1585,7 +1587,7 @@ header .social-links ul li a:hover, header .social-links ul li a:focus {
 }
 
 #tab-contact #message-warning, #tab-contact #message-success {
-  display: none;
+  display: inline;
   background: #dedede;
   border-radius: 3px;
   padding: 3rem;
@@ -1875,25 +1877,25 @@ object:hover {
 Responsive Image Gallery
 -----------------------------------------------------------------*/
 #photo-container{
-	max-height: 40%;
+	max-height: 75%;
 	overflow: scroll;
 }
 #photos {
   /* Prevent vertical gaps */
-  line-height: 0px;
-  -webkit-column-count: 3;
+  line-height: 0;
+  -webkit-column-count: 5;
   -webkit-column-gap: 0px;
-  -moz-column-count: 3;
+  -moz-column-count: 5;
   -moz-column-gap: 0px;
-  column-count: 3;
+  column-count: 5;
   column-gap: 0px;
+	overflow: scroll;
 }
 
 #photos img {
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
-	display: inline;
 }
 
 @media (max-width: 1200px) {
