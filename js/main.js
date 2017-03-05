@@ -21,19 +21,20 @@
     });
   })
 
-  $('.particle').particleground({
-    dotColor: '#555555',
-    lineColor: '#555555',
-    particleRadius: 6,
-    curveLines: true,
-    density: 10000,
-    proximity: 110
-  });
+  // $('.particle').particleground({
+  //   dotColor: '#555555',
+  //   lineColor: '#555555',
+  //   particleRadius: 6,
+  //   curveLines: true,
+  //   density: 10000,
+  //   proximity: 110
+  // });
 
 
   /*-----------------------------------------------------*/
   /* tabs
   	-------------------------------------------------------*/
+
   $(".tab-content").hide();
   $(".tab-content").first().show();
 
@@ -178,6 +179,12 @@
         '</div>'));
 
     });
+
+    /*=====================================================================
+    Image loading
+    ======================================*/
+
+    // $(".item-image").delay(1000).animate({ opacity: 1 }, 700);​
 
   /*=======================================================================
 
@@ -532,6 +539,27 @@
     element: document.getElementsByClassName('cube')[0]
   });
 
+  //QUOTES FADING
+
+  function quotable() {
+    var quotes = $(".quotes");
+    var quoteIndex = -1;
+
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(2000)
+            .delay(2000)
+            .fadeOut(2000, showNextQuote);
+    }
+
+    showNextQuote();
+  }
+
+ $(document).ready(function()
+ {
+     quotable();
+ });
   //  IMAGE Gallery
 
   function getRandomSize(min, max) {
