@@ -595,10 +595,9 @@
 
   var allImages = "";
 
-  for (var i = 0; i < 25; i++) {
+  for (var i = 0; i < 9; i++) {
     var width = getRandomSize(200, 400);
     var height = getRandomSize(200, 400);
-    allImages += '<img src="https://placehold.it/' + width + 'x' + height + '" alt="pretty kitty">';
   }
 
   $('#photos').append(allImages);
