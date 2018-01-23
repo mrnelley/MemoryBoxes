@@ -2209,7 +2209,7 @@ header .social-links ul li a:hover, header .social-links ul li a:focus {
   overflow: hidden;
   position: absolute;
   opacity: 0.1;
-  background-image: url("http://jordizle.com/demo/376/3d-interactive-cube-with-rotating-sides-using-css3-and-javascript/assets/img/cube/blank.png");
+  /* background-image: url("http://jordizle.com/demo/376/3d-interactive-cube-with-rotating-sides-using-css3-and-javascript/assets/img/cube/blank.png"); */
   -webkit-touch-callout: none;
   -moz-touch-callout: none;
   -ms-touch-callout: none;
